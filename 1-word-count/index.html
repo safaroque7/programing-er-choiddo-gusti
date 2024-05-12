@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Word Count</title>
+  </head>
+  <body>
+    <script>
+      // for word count
+      function wordCount(sentence) {
+        let count = 0;
+
+        for (let i = 0; i < sentence.length; i++) {
+          if (sentence[i] == " ") {
+            count++;
+          }
+        }
+
+        count++;
+        return count;
+      }
+      console.log(wordCount("How are you doing?"));
+
+      // for line count
+      function lineCount(sentence) {
+        let count = 0;
+
+        for (let i = 0; i < sentence.length; i++) {
+          if (sentence[i] == "." || sentence[i] == "?" || sentence[i] == "!") {
+            count++;
+          }
+        }
+        return count;
+      }
+
+      console.log(
+        lineCount(
+          "I am S A Faroque. I am a web developer. Who are you? What a nice idea!"
+        )
+      );
+    </script>
+  </body>
+</html>
